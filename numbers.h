@@ -67,7 +67,10 @@ void Numbers::remove_last(){
 }
 
 void Numbers::display(std::ostream& outs){
-
+	for (size_t i = 0; i < (used - 1); i++) {
+		outs << data[i] << ' ';
+	}
+	outs << data[used - 1];
 }
 
 // You can leave this function alone
