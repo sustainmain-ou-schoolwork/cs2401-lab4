@@ -9,6 +9,9 @@
 	Patricia Lindner	Fall 2021
 *************************************************************************/
 
+#ifndef NUMBERS_H
+#define NUMBERS_H
+
 #include <iostream>
 
 size_t byte_count = 0;
@@ -27,7 +30,7 @@ class Numbers{
         std::size_t capacity;  // the maximum amount of numbers the array could store
 };
 
-Numbers::Numbers(){
+Numbers::Numbers() {
 	capacity = 5;
 	used = 0;
 	data = new unsigned long[capacity];
@@ -77,3 +80,5 @@ void Numbers::display(std::ostream& outs){
 unsigned long *Numbers::reveal_address()const{
 	return data;
 }
+
+#endif

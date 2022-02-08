@@ -1,0 +1,18 @@
+1.
+2 4 6 8 10 12 14
+2 4 6 5 10 15 14
+0x561f5834a1a0
+0x561f5834a4d0
+0x561f5834a800
+0x561f5834ab30
+0x561f5834ae60
+
+Running took 0 minutes.
+Total bytes allocated = 4120
+
+
+2.
+this is a problem because the data arrays for the Number objects are linked
+
+3.
+this happened both Number objects have the same value for their data pointers

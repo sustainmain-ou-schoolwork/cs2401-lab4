@@ -8,7 +8,7 @@
 
 #include <ctime>
 
-#include "numbers-zach.h"
+#include "numbers.h"
 
 using namespace std;
 
@@ -33,6 +33,7 @@ int main(){
 	}
 
     N1.display(cout);
+	cout << endl;
 
 	unsigned long start, stop, running;
 
