@@ -40,6 +40,17 @@ void Numbers::add(unsigned long item){
 }
 
 void Numbers::resize(){
+    capacity += 5;
+
+    unsigned long* tmp;
+    tmp = new unsigned long[capacity];
+    
+    for (size_t i = 0; i < used; i++) {
+        tmp[i] = data[i];
+    }
+
+    delete data;
+    data = tmp;
 
 	byte_count += 5*sizeof(unsigned long);
 }
