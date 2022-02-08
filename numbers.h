@@ -17,13 +17,52 @@
 size_t byte_count = 0;
 class Numbers{
     public:
+		/**
+		 * @brief Construct a new Numbers object.
+		 */
 		Numbers();
+
+		/**
+		 * @brief Deconstruct the Numbers object.
+		 */
 		~Numbers();
+
+		/**
+		 * @brief Add an item to the data array.
+		 * 
+		 * @param item the item to add
+		 */
 		void add(unsigned long item);
+
+		/**
+		 * @brief Increase the size of the data array.
+		 */
 		void resize();
+
+		/**
+		 * @brief Remove the last item from the data array.
+		 */
 		void remove_last();
+
+		/**
+		 * @brief Output the data in the data array.
+		 * 
+		 * @param outs ostream to output to
+		 */
 		void display(std::ostream& outs);
+
+		/**
+		 * @brief Return the address of the data array.
+		 * 
+		 * @return the address of data
+		 */
 		unsigned long* reveal_address()const;
+
+		/**
+		 * @brief Set the values of a Numbers object equal to another.
+		 * 
+		 * @param n Numbers object to copy values from
+		 */
 		void operator = (const Numbers& n);
 
     private:
