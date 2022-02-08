@@ -56,7 +56,9 @@ void Numbers::resize(){
 }
 
 void Numbers::remove_last(){
-
+	if (used > 0) {
+		used--;
+	}
 }
 
 void Numbers::display(std::ostream& outs){
