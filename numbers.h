@@ -41,7 +41,7 @@ Numbers::Numbers() {
 }
 
 Numbers::~Numbers() {
-	delete data;
+	delete []data;
 
 	byte_count -= capacity * sizeof(unsigned long);
 }
@@ -65,7 +65,7 @@ void Numbers::resize(){
         tmp[i] = data[i];
     }
 
-    delete data;
+    delete []data;
     data = tmp;
 
 	byte_count += 5*sizeof(unsigned long);
@@ -94,7 +94,7 @@ void Numbers::operator = (const Numbers& n) {
 		used = n.used;
 		capacity = n.capacity;
 
-		delete data;
+		delete []data;
 		data = new unsigned long[capacity];
 
 		for (size_t i = 0; i < n.used; i++) {
