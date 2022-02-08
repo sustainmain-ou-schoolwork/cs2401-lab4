@@ -21,11 +21,16 @@ class Numbers{
 		void display(std::ostream& outs);
 		unsigned long* reveal_address()const;
 
-    private: 
-
+    private:
+		unsigned long* data;   // the array for all the numbers
+        std::size_t used;      // the amount of numbers stored
+        std::size_t capacity;  // the maximum amount of numbers the array could store
 };
 
 Numbers::Numbers(){
+	capacity = 5;
+	used = 0;
+	data = new unsigned long[capacity];
 
 	byte_count += 5*sizeof(unsigned long);
 }
