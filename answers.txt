@@ -1,11 +1,6 @@
 1.
 2 4 6 8 10 12 14
 2 4 6 5 10 15 14
-0x561f5834a1a0
-0x561f5834a4d0
-0x561f5834a800
-0x561f5834ab30
-0x561f5834ae60
 
 Running took 0 minutes.
 Total bytes allocated = 4120
@@ -22,11 +17,6 @@ this happened both Numbers objects have the same value for their data pointers
 4.
 2 4 6 8 10 12 14
 2 4 6 8 10 12 14
-0x559edd196200
-0x559edd196530
-0x559edd196860
-0x559edd196b90
-0x559edd196ec0
 
 Running took 0 minutes.
 Total bytes allocated = 4120
@@ -39,3 +29,34 @@ yes; N1 wasn't modified this time
 6.
 N1 wasn't modified because N1.data and N2.data don't point to the same address
 
+
+7.
+0x5572ef7a2200
+0x5572ef7a2530
+0x5572ef7a2860
+0x5572ef7a2b90
+0x5572ef7a2ec0
+
+Running took 0 minutes.
+Total bytes allocated = 4120
+
+
+8.
+816 bytes
+
+
+9.
+0x55ec54cae200
+0x55ec54cae200
+0x55ec54cae200
+0x55ec54cae200
+0x55ec54cae200
+0 bytes
+
+
+10.
+120 bytes
+
+
+11.
+objects were automatically deconstructed once they were out of scope, so the same memory kept being allocated and deallocated

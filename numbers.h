@@ -18,6 +18,7 @@ size_t byte_count = 0;
 class Numbers{
     public:
 		Numbers();
+		~Numbers();
 		void add(unsigned long item);
 		void resize();
 		void remove_last();
@@ -37,6 +38,12 @@ Numbers::Numbers() {
 	data = new unsigned long[capacity];
 
 	byte_count += 5*sizeof(unsigned long);
+}
+
+Numbers::~Numbers() {
+	delete data;
+
+	byte_count -= capacity * sizeof(unsigned long);
 }
 
 void Numbers::add(unsigned long item){
