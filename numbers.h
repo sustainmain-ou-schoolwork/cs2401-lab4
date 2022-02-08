@@ -36,7 +36,12 @@ Numbers::Numbers(){
 }
 
 void Numbers::add(unsigned long item){
+	if (used >= capacity) {
+		resize();
+	}
 
+	data[used] = item;
+	used++;
 }
 
 void Numbers::resize(){
