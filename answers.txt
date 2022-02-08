@@ -12,7 +12,30 @@ Total bytes allocated = 4120
 
 
 2.
-this is a problem because the data arrays for the Number objects are linked
+this is a problem because the data arrays for the Numbers objects are linked
+
 
 3.
-this happened both Number objects have the same value for their data pointers
+this happened both Numbers objects have the same value for their data pointers
+
+
+4.
+2 4 6 8 10 12 14
+2 4 6 8 10 12 14
+0x559edd196200
+0x559edd196530
+0x559edd196860
+0x559edd196b90
+0x559edd196ec0
+
+Running took 0 minutes.
+Total bytes allocated = 4120
+
+
+5.
+yes; N1 wasn't modified this time
+
+
+6.
+N1 wasn't modified because N1.data and N2.data don't point to the same address
+

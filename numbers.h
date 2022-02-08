@@ -23,6 +23,7 @@ class Numbers{
 		void remove_last();
 		void display(std::ostream& outs);
 		unsigned long* reveal_address()const;
+		void operator = (const Numbers& n);
 
     private:
 		unsigned long* data;   // the array for all the numbers
@@ -79,6 +80,20 @@ void Numbers::display(std::ostream& outs){
 // You can leave this function alone
 unsigned long *Numbers::reveal_address()const{
 	return data;
+}
+
+void Numbers::operator = (const Numbers& n) {
+	if (this != &n) {
+		used = n.used;
+		capacity = n.capacity;
+
+		delete data;
+		data = new unsigned long[capacity];
+
+		for (size_t i = 0; i < n.used; i++) {
+			data[i] = n.data[i];
+		}
+	}
 }
 
 #endif
